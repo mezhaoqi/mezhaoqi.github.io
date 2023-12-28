@@ -69,6 +69,138 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-postcss-px-to-viewport移动端适配" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/12/28/postcss-px-to-viewport%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D/" class="article-date">
+  <time class="dt-published" datetime="2023-12-28T08:36:04.000Z" itemprop="datePublished">2023-12-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/12/28/postcss-px-to-viewport%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D/">postcss-px-to-viewport移动端适配</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="安装postcss-px-to-viewport"><a href="#安装postcss-px-to-viewport" class="headerlink" title="安装postcss-px-to-viewport"></a>安装<a target="_blank" rel="noopener" href="https://vant-contrib.gitee.io/vant/#/zh-CN/advanced-usage#viewport-bu-ju">postcss-px-to-viewport</a></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install postcss-px-to-viewport -D</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置：postcss-config-js"><a href="#配置：postcss-config-js" class="headerlink" title="配置：postcss.config.js"></a>配置：<code>postcss.config.js</code></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">plugins</span>: &#123;</span><br><span class="line">    <span class="string">&#x27;postcss-px-to-viewport&#x27;</span>: &#123;</span><br><span class="line">      <span class="comment">// 设备宽度375计算vw的值</span></span><br><span class="line">      <span class="attr">viewportWidth</span>: <span class="number">375</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/12/28/postcss-px-to-viewport%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D/" data-id="clqozxpyr0005p9fy6d9d1rv7" data-title="postcss-px-to-viewport移动端适配" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-pm2托管" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/12/28/pm2%E6%89%98%E7%AE%A1/" class="article-date">
+  <time class="dt-published" datetime="2023-12-28T08:01:30.000Z" itemprop="datePublished">2023-12-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/12/28/pm2%E6%89%98%E7%AE%A1/">pm2托管</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>1、全局按照</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i pm2 -g</span><br></pre></td></tr></table></figure>
+
+<p>2、使用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># pm2 serve 目录 端口  --name 服务名称</span><br><span class="line">pm2 serve ./ <span class="number">8080</span> --name my-project</span><br></pre></td></tr></table></figure>
+
+<p>3、history路由模式问题，如果有子路径，刷新页面 404</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 serve --spa ./ <span class="number">8080</span> --name my-project</span><br></pre></td></tr></table></figure>
+
+<p>4、常用命令</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 查看服务列表</span><br><span class="line">pm2 list</span><br><span class="line"># 删除服务</span><br><span class="line">pm2 <span class="keyword">delete</span> my-cp-server</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/12/28/pm2%E6%89%98%E7%AE%A1/" data-id="clqozxpyq0004p9fyfkp518xv" data-title="pm2托管" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Eruda手机调试面板工具" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/12/28/Eruda%E6%89%8B%E6%9C%BA%E8%B0%83%E8%AF%95%E9%9D%A2%E6%9D%BF%E5%B7%A5%E5%85%B7/" class="article-date">
+  <time class="dt-published" datetime="2023-12-28T07:43:10.000Z" itemprop="datePublished">2023-12-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/12/28/Eruda%E6%89%8B%E6%9C%BA%E8%B0%83%E8%AF%95%E9%9D%A2%E6%9D%BF%E5%B7%A5%E5%85%B7/">Eruda手机调试面板工具</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><a target="_blank" rel="noopener" href="https://github.com/liriliri/eruda">使用方式</a></p>
+<p><a target="_blank" rel="noopener" href="https://cdnjs.com/">cdn</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span>(<span class="variable constant_">DEV</span>)&#123; %&gt;</span><br><span class="line"> <span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdnjs.cloudflare.com/ajax/libs/eruda/3.0.1/eruda.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"> <span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span>eruda.init()<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"> &lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用 vite-plugin-html 解析模板，默认支持 ejs 模板引擎语法</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/12/28/Eruda%E6%89%8B%E6%9C%BA%E8%B0%83%E8%AF%95%E9%9D%A2%E6%9D%BF%E5%B7%A5%E5%85%B7/" data-id="clqozxpym0000p9fy1xco3352" data-title="Eruda手机调试面板工具" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-git" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/12/28/git/" class="article-date">
@@ -91,12 +223,16 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p><img src="/2023/12/28/git/code.png" alt="这是图片"></p>
+        <h3 id="1、git常用命令"><a href="#1、git常用命令" class="headerlink" title="1、git常用命令"></a>1、git常用命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 配置用户名</span></span><br><span class="line">git config --global user.name <span class="string">&quot;gitee注册的用户名&quot;</span></span><br><span class="line"><span class="comment"># 配置邮箱</span></span><br><span class="line">git config --global user.email gitee配置的邮箱</span><br><span class="line"><span class="comment"># 查看配置</span></span><br><span class="line">git config --list</span><br><span class="line"><span class="comment"># 初始化仓库</span></span><br><span class="line">git init</span><br><span class="line"><span class="comment"># 添加到暂存区</span></span><br><span class="line">git add .</span><br><span class="line"><span class="comment"># 记录到版本库</span></span><br><span class="line">git commit -m<span class="string">&quot;信息&quot;</span></span><br><span class="line"><span class="comment"># 简略信息</span></span><br><span class="line">git <span class="built_in">log</span> --oneline</span><br><span class="line"><span class="comment"># 完整信息，如果出现无法退出，可以按 q</span></span><br><span class="line">git <span class="built_in">log</span></span><br><span class="line"><span class="comment"># 切换到指定版本</span></span><br><span class="line">git reset --hard 版本号</span><br><span class="line"><span class="comment"># 查看完整历史（版本切换之后git log可能会出现无法查看的情况）</span></span><br><span class="line">git reflog</span><br><span class="line"><span class="comment"># 查看文件状态</span></span><br><span class="line">git status</span><br></pre></td></tr></table></figure>
+<h3 id="2、-gitignore-部分语法"><a href="#2、-gitignore-部分语法" class="headerlink" title="2、.gitignore 部分语法"></a>2、<code>.gitignore</code> 部分语法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这里演示的部分语法</span></span><br><span class="line"><span class="comment"># #之后的内容是注释 会被Git忽略</span></span><br><span class="line"><span class="comment"># 忽略 info.txt 文件</span></span><br><span class="line">info.txt</span><br><span class="line"><span class="comment"># 忽略 .vscode/ 目录下所有的文件</span></span><br><span class="line">.vscode</span><br><span class="line"><span class="comment"># 忽略目录下所有.md结尾的文件</span></span><br><span class="line">*.md</span><br><span class="line"><span class="comment"># 会忽略 doc/目录下扩展名为txt的文件</span></span><br><span class="line">doc/*.txt</span><br></pre></td></tr></table></figure>
 
+<h3 id="3、分支"><a href="#3、分支" class="headerlink" title="3、分支"></a>3、分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建分支</span></span><br><span class="line">git branch 新分支名</span><br><span class="line"><span class="comment"># 查看分支</span></span><br><span class="line">git branch</span><br><span class="line"><span class="comment"># 切换分支</span></span><br><span class="line">git checkout 分支名</span><br><span class="line"><span class="comment"># 重命名分支 ，如果默认是master，可以通过这个命令改为main</span></span><br><span class="line">git branch -m 老分支 新分支</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、合并分支"><a href="#4、合并分支" class="headerlink" title="4、合并分支"></a>4、合并分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将指定分支合并到当前分支</span></span><br><span class="line">git merge 分支名</span><br><span class="line"><span class="comment"># 删除已合并的分支</span></span><br><span class="line">git branch -d 分支名</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这些是目前学习的分支相关命令</span></span><br><span class="line"><span class="comment"># 创建分支</span></span><br><span class="line">git branch 新分支名</span><br><span class="line"><span class="comment"># 切换分支</span></span><br><span class="line">git checkout 分支名</span><br><span class="line"><span class="comment"># 查看分支</span></span><br><span class="line">git branch</span><br><span class="line"><span class="comment"># 切换分支</span></span><br><span class="line">git checkout 分支名</span><br><span class="line"><span class="comment"># 重命名分支 ，如果默认是master，可以通过这个命令改为main</span></span><br><span class="line">git branch -m 老分支 新分支</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/28/git/" data-id="clqoncbp100007gfy4cqf5o2x" data-title="git" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/2023/12/28/git/" data-id="clqozxpyq0003p9fy4efpeue2" data-title="git" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -130,7 +266,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><h1 id="h1"><a href="#h1" class="headerlink" title="h1"></a>h1</h1><h2 id="h2"><a href="#h2" class="headerlink" title="h2"></a>h2</h2><h3 id="h3"><a href="#h3" class="headerlink" title="h3"></a>h3</h3><h4 id="h4"><a href="#h4" class="headerlink" title="h4"></a>h4</h4><h5 id="h5"><a href="#h5" class="headerlink" title="h5"></a>h5</h5><h6 id="h6"><a href="#h6" class="headerlink" title="h6"></a>h6</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> a=1;</span><br><span class="line"><span class="built_in">let</span> b=2;</span><br><span class="line">console.log(a,b);</span><br></pre></td></tr></table></figure>
+        <h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><h1 id="h1"><a href="#h1" class="headerlink" title="h1"></a>h1</h1><h2 id="h2"><a href="#h2" class="headerlink" title="h2"></a>h2</h2><h3 id="h3"><a href="#h3" class="headerlink" title="h3"></a>h3</h3><h4 id="h4"><a href="#h4" class="headerlink" title="h4"></a>h4</h4><h5 id="h5"><a href="#h5" class="headerlink" title="h5"></a>h5</h5><h6 id="h6"><a href="#h6" class="headerlink" title="h6"></a>h6</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> b=<span class="number">2</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a,b);</span><br></pre></td></tr></table></figure>
 
 <h3 id="高亮"><a href="#高亮" class="headerlink" title="高亮"></a>高亮</h3><blockquote>
 <p>这段文字高亮显示</p>
@@ -140,6 +276,12 @@
 <li>段落</li>
 <li>段落</li>
 <li>段落</li>
+</ul>
+<ul>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+<li>Fourth item</li>
 </ul>
 <h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><hr>
 <hr>
@@ -172,13 +314,19 @@
 <p>多个段落的块引用</p>
 </blockquote>
 <h3 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h3><p>这是一个链接<a href="www.baidu.com">百度</a></p>
-<h3 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h3><p>&lt;<a href="http://www.baidu.com>">www.baidu.com&gt;</a></p>
+<h3 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h3><p>&lt;<a href="http://www.baidu.com>">www.baidu.com&gt;</a><br><a target="_blank" rel="noopener" href="https://markdown.com.cn/">https://markdown.com.cn</a></p>
 <h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p><img src="/2023/12/28/markdown/dog.jpeg" alt="这是图片"></p>
+<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><pre><code>&lt;html&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="转义反引号"><a href="#转义反引号" class="headerlink" title="转义反引号"></a>转义反引号</h3><p><code>Use `code` in your Markdown file.</code><br><code>in your Markdown file.</code><br><code>in your Markdown file.</code><br>At the command prompt, type <code>nano</code>.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/28/markdown/" data-id="clqoncbp500027gfy2rl0hzsd" data-title="markdown 常用方法" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/2023/12/28/markdown/" data-id="clqozxpyp0002p9fy6zc422iy" data-title="markdown 常用方法" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -229,7 +377,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/27/hello-world/" data-id="clqoncbp400017gfy1yl3cat6" data-title="Hello World" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/2023/12/27/hello-world/" data-id="clqozxpyo0001p9fy5sjyh9yx" data-title="Hello World" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -272,15 +420,23 @@
       <ul>
         
           <li>
+            <a href="/2023/12/28/postcss-px-to-viewport%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D/">postcss-px-to-viewport移动端适配</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/28/pm2%E6%89%98%E7%AE%A1/">pm2托管</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/28/Eruda%E6%89%8B%E6%9C%BA%E8%B0%83%E8%AF%95%E9%9D%A2%E6%9D%BF%E5%B7%A5%E5%85%B7/">Eruda手机调试面板工具</a>
+          </li>
+        
+          <li>
             <a href="/2023/12/28/git/">git</a>
           </li>
         
           <li>
             <a href="/2023/12/28/markdown/">markdown 常用方法</a>
-          </li>
-        
-          <li>
-            <a href="/2023/12/27/hello-world/">Hello World</a>
           </li>
         
       </ul>
