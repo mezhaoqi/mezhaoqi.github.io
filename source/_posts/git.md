@@ -74,3 +74,23 @@ git checkout 分支名
 # 重命名分支 ，如果默认是master，可以通过这个命令改为main
 git branch -m 老分支 新分支
 ```
+
+### 5、已有仓库，需要提交到线上
+如果是通过 `git init` 创建出来的仓库，先通过 `remote` 相关命令进行设置
+``` bash
+# 查看所有的远程仓库信息
+git remote show
+# 根据别名查看指定的远程仓库信息
+git remote show 远程仓库地址别名
+# 添加远程仓库信息 例：git remote add origin https://github.com/mezhaoqi/mezhaoqi.github.io.git
+git remote add 别名 远程仓库地址
+```
+
+通过 `git remote add` 添加完远程仓库地址后，如果执行 `git push`会提示
+``` bash
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+```
+按照提示执行 `git push --set-upstream origin main` 后就可以 `git push` 推送到远程了
