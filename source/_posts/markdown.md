@@ -96,3 +96,6 @@ __粗体__
 ``in your Markdown file.``
 At the command prompt, type `nano`.
 
+### hexo写作
+     hexo new [title]
+

@@ -94,3 +94,8 @@ To push the current branch and set the remote as upstream, use
     git push --set-upstream origin main
 ```
 按照提示执行 `git push --set-upstream origin main` 后就可以 `git push` 推送到远程了
+
+### 6、git全局配置-删除
+``` bash
+git config --unset --global user.name
+```
