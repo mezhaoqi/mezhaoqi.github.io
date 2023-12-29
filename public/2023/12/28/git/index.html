@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>git | mezhaoqi@163.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="1、git常用命令12345678910111213141516171819202122# 配置用户名git config --global user.name &quot;gitee注册的用户名&quot;# 配置邮箱git config --global user.email gitee配置的邮箱# 查看配置git config --list# 初始化仓库git init# 添加到暂存区git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git">
+<meta property="og:url" content="http://example.com/2023/12/28/git/index.html">
+<meta property="og:site_name" content="mezhaoqi@163.com">
+<meta property="og:description" content="1、git常用命令12345678910111213141516171819202122# 配置用户名git config --global user.name &quot;gitee注册的用户名&quot;# 配置邮箱git config --global user.email gitee配置的邮箱# 查看配置git config --list# 初始化仓库git init# 添加到暂存区git">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-12-28T03:11:10.000Z">
+<meta property="article:modified_time" content="2023-12-28T09:21:56.101Z">
+<meta property="article:author" content="Zhaoqi">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="mezhaoqi@163.com" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">mezhaoqi@163.com</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-git" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/12/28/git/" class="article-date">
+  <time class="dt-published" datetime="2023-12-28T03:11:10.000Z" itemprop="datePublished">2023-12-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      git
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="1、git常用命令"><a href="#1、git常用命令" class="headerlink" title="1、git常用命令"></a>1、git常用命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 配置用户名</span></span><br><span class="line">git config --global user.name <span class="string">&quot;gitee注册的用户名&quot;</span></span><br><span class="line"><span class="comment"># 配置邮箱</span></span><br><span class="line">git config --global user.email gitee配置的邮箱</span><br><span class="line"><span class="comment"># 查看配置</span></span><br><span class="line">git config --list</span><br><span class="line"><span class="comment"># 初始化仓库</span></span><br><span class="line">git init</span><br><span class="line"><span class="comment"># 添加到暂存区</span></span><br><span class="line">git add .</span><br><span class="line"><span class="comment"># 记录到版本库</span></span><br><span class="line">git commit -m<span class="string">&quot;信息&quot;</span></span><br><span class="line"><span class="comment"># 简略信息</span></span><br><span class="line">git <span class="built_in">log</span> --oneline</span><br><span class="line"><span class="comment"># 完整信息，如果出现无法退出，可以按 q</span></span><br><span class="line">git <span class="built_in">log</span></span><br><span class="line"><span class="comment"># 切换到指定版本</span></span><br><span class="line">git reset --hard 版本号</span><br><span class="line"><span class="comment"># 查看完整历史（版本切换之后git log可能会出现无法查看的情况）</span></span><br><span class="line">git reflog</span><br><span class="line"><span class="comment"># 查看文件状态</span></span><br><span class="line">git status</span><br></pre></td></tr></table></figure>
+<h3 id="2、-gitignore-部分语法"><a href="#2、-gitignore-部分语法" class="headerlink" title="2、.gitignore 部分语法"></a>2、<code>.gitignore</code> 部分语法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这里演示的部分语法</span></span><br><span class="line"><span class="comment"># #之后的内容是注释 会被Git忽略</span></span><br><span class="line"><span class="comment"># 忽略 info.txt 文件</span></span><br><span class="line">info.txt</span><br><span class="line"><span class="comment"># 忽略 .vscode/ 目录下所有的文件</span></span><br><span class="line">.vscode</span><br><span class="line"><span class="comment"># 忽略目录下所有.md结尾的文件</span></span><br><span class="line">*.md</span><br><span class="line"><span class="comment"># 会忽略 doc/目录下扩展名为txt的文件</span></span><br><span class="line">doc/*.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、分支"><a href="#3、分支" class="headerlink" title="3、分支"></a>3、分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建分支</span></span><br><span class="line">git branch 新分支名</span><br><span class="line"><span class="comment"># 查看分支</span></span><br><span class="line">git branch</span><br><span class="line"><span class="comment"># 切换分支</span></span><br><span class="line">git checkout 分支名</span><br><span class="line"><span class="comment"># 重命名分支 ，如果默认是master，可以通过这个命令改为main</span></span><br><span class="line">git branch -m 老分支 新分支</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、合并分支"><a href="#4、合并分支" class="headerlink" title="4、合并分支"></a>4、合并分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将指定分支合并到当前分支</span></span><br><span class="line">git merge 分支名</span><br><span class="line"><span class="comment"># 删除已合并的分支</span></span><br><span class="line">git branch -d 分支名</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这些是目前学习的分支相关命令</span></span><br><span class="line"><span class="comment"># 创建分支</span></span><br><span class="line">git branch 新分支名</span><br><span class="line"><span class="comment"># 切换分支</span></span><br><span class="line">git checkout 分支名</span><br><span class="line"><span class="comment"># 查看分支</span></span><br><span class="line">git branch</span><br><span class="line"><span class="comment"># 切换分支</span></span><br><span class="line">git checkout 分支名</span><br><span class="line"><span class="comment"># 重命名分支 ，如果默认是master，可以通过这个命令改为main</span></span><br><span class="line">git branch -m 老分支 新分支</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/12/28/git/" data-id="clqpwz4su0002kwfy6eycf3uz" data-title="git" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/12/28/Eruda%E6%89%8B%E6%9C%BA%E8%B0%83%E8%AF%95%E9%9D%A2%E6%9D%BF%E5%B7%A5%E5%85%B7/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          Eruda手机调试面板工具
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/12/28/markdown/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">markdown 常用方法</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/12/28/postcss-px-to-viewport%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D/">postcss-px-to-viewport移动端适配</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/28/pm2%E6%89%98%E7%AE%A1/">pm2托管</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/28/Eruda%E6%89%8B%E6%9C%BA%E8%B0%83%E8%AF%95%E9%9D%A2%E6%9D%BF%E5%B7%A5%E5%85%B7/">Eruda手机调试面板工具</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/28/git/">git</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/28/markdown/">markdown 常用方法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Zhaoqi<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
